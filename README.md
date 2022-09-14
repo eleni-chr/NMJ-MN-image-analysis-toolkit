@@ -132,3 +132,5 @@ Note that the above calculations take into account the background fluorescence, 
 - Genotype.
 - Image number (1 to n).
 
+28. **For four-channel images:** Load MATLAB and set the current directory to the folder containing the image subfolders. Run the MATLAB function **FCD_SC_masterfile.m**. This function transfers the data from each **mergedData.xlsx** file into a single file called **masterfile.xlsx** which is saved in the parent directory.
+29. **For three-channel images:** Load MATLAB and set the current directory to the folder containing the image subfolders. Run the MATLAB function **FCD_SC_DYN_masterfile.m**. This function transfers the data from each **mergedData.xlsx** file into a single file called **DYNmasterfile.xlsx** which is saved in the parent directory.
