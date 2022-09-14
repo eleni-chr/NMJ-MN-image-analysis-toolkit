@@ -82,3 +82,39 @@ WORKFLOW INSTRUCTIONS:
 **Analysis of ChAT fluorescence intensity**
 
 25. Run the ImageJ macro **SC_IHC_ChAT_intensity.ijm**. A dialog box will ask you to select the input folder, so select the image subfolders one by one until all images are processed. This macro calculates the integrated density of the cytoplasm for each cell, and saves these results in a file called **ChAT_CytoplasmIntDen.csv**. The results are in the order in which the ROIs appear in the ROI Manager window.
+
+**Merge data into master files**
+
+26. Load MATLAB and set the current directory to the folder containing the image subfolders. Run the MATLAB function **FCD_SC_merge_data.m**. This function merges all the data from the separate ImageJ CSV files into one file, and also does the following calculations for each cell in each image. The merged data for each image are saved in the image folder as **mergedData.xlsx**.
+
+*Using the TDP-43 data:*
+
+- Amount of TDP-43 that is in the nucleus (normalised to area): TDP_N = RawIntDen (of nucleus) / Area (of nucleus).
+- Amount of TDP-43 that is in the cytoplasm (normalised to area): TDP_C = RawIntDen (of cytoplasm) / Area (of cytoplasm).
+- Total amount of TDP-43 in the cell: TDP_T= TDP_N + TDP_C.
+- Percentage of TDP-43 that is localised to the nucleus: TDP_pN = TDP_N/TDP_T*100.
+- Percentage of TDP-43 that is localised to the cytoplasm: TDP_pC = TDP_C/TDP_T*100.
+- Nucleus/Soma area: NucToPerArea = Area (of nucleus) / (Area of nucleus + Area of cytoplasm).
+- Whether more than 50% of TDP-43 is cytoplasmic: If pC>50 then MajorCytTDP=1 (yes) else MajorCytTDP=0 (no).
+ 
+*Using the p62 data:*
+
+- Amount of p62 that is cytoplasmic (normalised to area): p62_C = RawIntDen (of cytoplasm) / Area (of cytoplasm). 
+
+Note that the above calculations take into account the background fluorescence, so the results are background-corrected.
+
+*The function also calculates the following, for each animal:*
+
+- Percentage of cells with >50% TDP-43 = (Total cells with >50% cytoplasmic TDP-43) / (Total cells).
+- Percentage of cells with TDP-43 puncta = (Total cells with TDP-43 puncta) / (Total cells).
+- Percentage of cells with p62 puncta = (Total cells with p62 puncta) / (Total cells).
+
+*The function also appends the following information to each cell analysed:*
+
+- Cell number in the image (1 to n).
+- Lumbar segment (L3 to L6).
+- Left or right ventral horn.
+- Animal ID.
+- Genotype.
+- Image number (1 to n).
+
