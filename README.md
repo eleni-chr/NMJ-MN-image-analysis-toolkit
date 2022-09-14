@@ -13,10 +13,7 @@ FOLDER HIERARCHY AND FILE STRUCTURE REQUIRED:
 
 WORKFLOW INSTRUCTIONS:
 1.	Load MATLAB and set the directory to a folder which contains the subfolders **z-Endplates**, **z-Terminals**, and **z-Merge**.
-2.	Run the MATLAB function **checkFrames.m** according to the instructions within the function file. This function allows you to loop through each image and define which frames need to be removed from each z-stack, in order to get rid of frames that contain overlapping axons stained by 2H3 in the green channel. Note that only consecutive frames at the start and/or end of the z-stack can be removed. The function saves an Excel file with this information, called **substackFrames.xlsx**.
-a.	*Which frames to remove:*
-i.	Remove frames at the start and/or end of the z-stack that contain axons, as these will interfere when trying to colocalise AChR and SV2 later.
-ii.	Remove frames that correspond to two different endplates sitting on top of each other.
+2.	Run the MATLAB function **checkFrames.m** according to the instructions within the function file. This function allows you to loop through each image and define which frames need to be removed from each z-stack, in order to get rid of frames that contain overlapping axons stained by 2H3 in the green channel. Note that only consecutive frames at the start and/or end of the z-stack can be removed. The function saves an Excel file with this information, called **substackFrames.xlsx**. *Which frames to remove:* a.	Remove frames at the start and/or end of the z-stack that contain axons, as these will interfere when trying to colocalise AChR and SV2 later. b.	Remove frames that correspond to two different endplates sitting on top of each other.
 3.	Run the MATLAB function **makeSubstacks.m**. This function will use the information in the above **substackFrames.xlsx** file to remove the unnecessary frames from each z-stack and save the new stacks in new folders called **z-Endplates substacks**, **z-Terminals substacks**, and **z-Merge substacks**.
 a.	There will be no substack images created for those endplates that have zeros in the Excel file as those are to be excluded.
 4.	Load ImageJ.
