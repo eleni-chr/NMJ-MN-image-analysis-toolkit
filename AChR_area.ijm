@@ -1,3 +1,5 @@
+\\Macro written by Eleni Christoforidou with contributions from Fabio Simoes.
+
 dir = getDirectory("Choose a Directory ");
    setBatchMode(true);
    count = 0;
