@@ -37,11 +37,9 @@ a.	There will be no substack images created for those endplates that have zeros 
 
 ## B.	MOTOR NEURON IHC IMAGE ANALYSIS
 
-BACKGROUND:
-- *There are two types of images:* Four-channel images are those stained for DAPI, ChAT, TDP-43, p62; Three-channel images are those stained for DAPI, ChAT, DYNC1H1.
+BACKGROUND: There are two types of images: Four-channel images are those stained for DAPI, ChAT, TDP-43, p62; Three-channel images are those stained for DAPI, ChAT, DYNC1H1.
 
-NOTE:
-*For the MATLAB functions to work:* The confocal images must be in individual folders (one folder per image/stack) and the folder name must have the following format: E.g., "FCD7-2_L3_LEFT", or "FC5-28_L4_RIGHT" or "FCD12-1_L5_LEFT_1" or FCD8-25_L6_RIGHT_1" (i.e., "animalID_lumbarSegment_VentralHornSide_ImageNumber", where ImageNumber is optional).
+NOTE: For the MATLAB functions to work, the confocal images must be in individual folders (one folder per image/stack) and the folder name must have the following format: E.g., "FCD7-2_L3_LEFT", or "FC5-28_L4_RIGHT" or "FCD12-1_L5_LEFT_1" or FCD8-25_L6_RIGHT_1" (i.e., "animalID_lumbarSegment_VentralHornSide_ImageNumber", where ImageNumber is optional).
 
 WORKFLOW INSTRUCTIONS:
 1. **For four-channel images:** Load the images (these are z-stacks) into ImageJ, and for each one, run the ImageJ macro **SC_IHC_prep.ijm**. This macro does the following in this order: 1) Sets the scale. 2) Defines the colours of each colour channel and saves the RGB stack. 3) Splits the colour channels and saves each channel stack individually. 4) Creates a maximum projection image of each coloured stack and saves these in TIFF format. 5) Converts each maximum projection image to greyscale, and saves these in TIFF format.
