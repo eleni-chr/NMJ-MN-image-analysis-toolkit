@@ -78,14 +78,28 @@ WORKFLOW INSTRUCTIONS:
 **Analysis of DYNC1H1 fluorescence intensity**
 
 24. Run the ImageJ macro **SC_IHC_DynHC.ijm**. A dialog box will ask you to select the input folder, so select the image subfolders one by one until all images are processed. This macro calculates the integrated density of the cytoplasm for each cell, and saves these results in a file called **DynHC.csv**. The results are in the order in which the ROIs appear in the ROI Manager window. This macro also saves all the ROIs in the ROI Manager as a file called ROIs.zip that can be opened in ImageJ later.
+25. Load MATLAB and set the current directory to the folder containing the image subfolders. Run the MATLAB function **FCD_SC_Dyn_merge.m**. This function merges all the data from the separate ImageJ CSV files into one file, and also does the following calculation for each cell in each image. The merged data for each image are saved in the image folder as **mergedData.xlsx**.
+
+*Calculation:* Amount of DYNC1H1 that is in the cytoplasm (normalised to area): DYN_C = RawIntDen (of cytoplasm) / Area (of cytoplasm).
+
+Note that the above calculation takes into account the background fluorescence, so the results are background-corrected.
+
+*The function also appends the following information to each cell analysed:*
+
+- Cell number in the image (1 to n).
+- Lumbar segment (L3 to L6).
+- Left or right ventral horn.
+- Animal ID.
+- Genotype.
+- Image number (1 to n).
 
 **Analysis of ChAT fluorescence intensity**
 
-25. Run the ImageJ macro **SC_IHC_ChAT_intensity.ijm**. A dialog box will ask you to select the input folder, so select the image subfolders one by one until all images are processed. This macro calculates the integrated density of the cytoplasm for each cell, and saves these results in a file called **ChAT_CytoplasmIntDen.csv**. The results are in the order in which the ROIs appear in the ROI Manager window.
+26. Run the ImageJ macro **SC_IHC_ChAT_intensity.ijm**. A dialog box will ask you to select the input folder, so select the image subfolders one by one until all images are processed. This macro calculates the integrated density of the cytoplasm for each cell, and saves these results in a file called **ChAT_CytoplasmIntDen.csv**. The results are in the order in which the ROIs appear in the ROI Manager window.
 
 **Merge data into master files**
 
-26. Load MATLAB and set the current directory to the folder containing the image subfolders. Run the MATLAB function **FCD_SC_merge_data.m**. This function merges all the data from the separate ImageJ CSV files into one file, and also does the following calculations for each cell in each image. The merged data for each image are saved in the image folder as **mergedData.xlsx**.
+27. Load MATLAB and set the current directory to the folder containing the image subfolders. Run the MATLAB function **FCD_SC_merge_data.m**. This function merges all the data from the separate ImageJ CSV files into one file, and also does the following calculations for each cell in each image. The merged data for each image are saved in the image folder as **mergedData.xlsx**.
 
 *Using the TDP-43 data:*
 
