@@ -1,4 +1,7 @@
 # NMJ-MN-image-analysis
+
+[![DOI](https://zenodo.org/badge/536756993.svg)](https://zenodo.org/badge/latestdoi/536756993)
+
 Morphometric analysis of neuromuscular junction microscopy images, and protein distribution and localisation analysis of immunohistochemically-labelled microscopy images.
 
 *README written by Eleni Christoforidou.*
