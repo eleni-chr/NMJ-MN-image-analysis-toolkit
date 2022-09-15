@@ -1,5 +1,5 @@
 function terminalColocalisation
-%% Function written by Eleni Christoforidou in MATLAB 2022a.
+%% Function written by Eleni Christoforidou in MATLAB R2022a.
 
 %The current directory must contain the folders 'Final endplates', and
 %'Final terminals'.
