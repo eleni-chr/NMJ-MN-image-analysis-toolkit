@@ -1,5 +1,5 @@
 function p62puncta
-%% Function written by Eleni Christoforidou in MATLAB 2022a.
+%% Function written by Eleni Christoforidou in MATLAB R2022a.
 
 %%
 %Loop through subfolders
