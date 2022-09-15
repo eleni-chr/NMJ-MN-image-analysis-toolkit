@@ -1,5 +1,5 @@
 function p62punctaMaster(mouseWT,mouseFLX,mouseLOA,mouseFLXLOA)
-%% Function written by Eleni Christoforidou in MATLAB 2022a.
+%% Function written by Eleni Christoforidou in MATLAB R2022a.
 
 %FUNCTION INPUT:
 %Four cell arrays, where each cell contains a character array representing
