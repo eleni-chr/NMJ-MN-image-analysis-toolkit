@@ -1,5 +1,5 @@
 function compileNMJdata(mouseWT,mouseFLX,mouseLOA,mouseFLXLOA)
-%% Function written by Eleni Christoforidou in MATLAB 2022a.
+%% Function written by Eleni Christoforidou in MATLAB R2022a.
 
 %The current directory must contain the 'Final endplates' and 'Final
 %terminals' folders, which will contain subfolders and CSV files created by
