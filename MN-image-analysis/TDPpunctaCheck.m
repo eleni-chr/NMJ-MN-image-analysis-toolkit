@@ -1,5 +1,5 @@
 function TDPpunctaCheck
-%% Function written by Eleni Christoforidou in MATLAB 2022a.
+%% Function written by Eleni Christoforidou in MATLAB R2022a.
 
 %%
 parentdir=cd;
