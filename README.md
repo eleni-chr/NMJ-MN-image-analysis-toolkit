@@ -107,7 +107,7 @@ Note that the above calculation takes into account the background fluorescence, 
 
 **Merge data into master files**
 
-31. Load MATLAB and set the current directory to the folder containing the image subfolders. Run the MATLAB function **FCD_SC_merge_data.m**. This function merges all the data from the separate ImageJ CSV files into one file, and also does the below calculations for each cell in each image. The merged data for each image are saved in the image folder as **mergedData.xlsx**.
+32. Load MATLAB and set the current directory to the folder containing the image subfolders. Run the MATLAB function **FCD_SC_merge_data.m**. This function merges all the data from the separate ImageJ CSV files into one file, and also does the below calculations for each cell in each image. The merged data for each image are saved in the image folder as **mergedData.xlsx**.
 
 *Caluclations using the TDP-43 data:*
 
@@ -140,5 +140,5 @@ Note that the above calculations take into account the background fluorescence, 
 - Genotype.
 - Image number (1 to n).
 
-32. **For four-channel images:** Load MATLAB and set the current directory to the folder containing the image subfolders. Run the MATLAB function **FCD_SC_masterfile.m**. This function transfers the data from each **mergedData.xlsx** file into a single file called **masterfile.xlsx** which is saved in the parent directory.
-33. **For three-channel images:** Load MATLAB and set the current directory to the folder containing the image subfolders. Run the MATLAB function **FCD_SC_DYN_masterfile.m**. This function transfers the data from each **mergedData.xlsx** file into a single file called **DYNmasterfile.xlsx** which is saved in the parent directory.
+33. **For four-channel images:** Load MATLAB and set the current directory to the folder containing the image subfolders. Run the MATLAB function **FCD_SC_masterfile.m**. This function transfers the data from each **mergedData.xlsx** file into a single file called **masterfile.xlsx** which is saved in the parent directory.
+34. **For three-channel images:** Load MATLAB and set the current directory to the folder containing the image subfolders. Run the MATLAB function **FCD_SC_DYN_masterfile.m**. This function transfers the data from each **mergedData.xlsx** file into a single file called **DYNmasterfile.xlsx** which is saved in the parent directory.
