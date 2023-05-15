@@ -1,4 +1,4 @@
-# NMJ-MN-image-analysis
+# NMJ-MN-image-analysis-toolkit
 
 [![DOI](https://zenodo.org/badge/536756993.svg)](https://zenodo.org/badge/latestdoi/536756993)
 
