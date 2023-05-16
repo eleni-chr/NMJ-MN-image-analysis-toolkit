@@ -2,8 +2,7 @@
 
 Morphometric analysis of neuromuscular junction microscopy images, and protein distribution and localisation analysis of immunohistochemically-labelled microscopy images.
 
-[[![DOI](https://zenodo.org/badge/536756993.svg)](https://zenodo.org/badge/latestdoi/536756993)
-](https://zenodo.org/record/7938481)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7938481.svg)](https://doi.org/10.5281/zenodo.7938481)
 
 *README written by Eleni Christoforidou.*
 
